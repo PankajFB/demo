@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            zoom: 100%;
+
+        }
+
+
+        h1 {
+            color: rgb(236, 138, 10);
+            text-shadow: 0 .5rem 1rem rgba(50, 0, 100, .1);
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        h2 {
+            font-family: 'Varela Round', sans-serif;
+            color: white;
+            text-shadow: 0 .5rem 1rem rgba(50, 0, 100, .1);
+            margin: 0;
+            font-size: 2rem;
+        }
+
+
+        #vanta-canvas {
+            width: 100vw;
+            height: 100vh;
+            /* z-index: 10; */
+        }
+
+        .demo {
+
+
+            width: 20vw;
+            height: 50vh;
+            position: relative;
+
+        }
+
+        #demo {
+            /* text-align: center; */
+            /* margin: 0 auto; */
+
+            width: 50px;
+            height: 50px;
+           
+            /* Center vertically and horizontally */
+            position: absolute;
+            top: 50%;
+            left: 20vw;
+            /* margin: -25px 0 0 -25px; */
+        }
+
+        .radio {
+            background-color: #fff;
+            border-radius: 1.5rem;
+            width: 25%;
+            float: left;
+        }
+
+        .register {
+            /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+            /* margin-top: 3%; */
+            padding: 3%;
+        }
+
+        .register-left {
+            text-align: center;
+            color: #fff;
+            margin-top: 4%;
+        }
+
+        .register-left input {
+            border: none;
+            border-radius: 1.5rem;
+            padding: 2%;
+            width: 60%;
+            background: #4535f3;
+            font-weight: bold;
+            color: #8cbde6;
+            margin-top: 30%;
+            margin-bottom: 3%;
+            cursor: pointer;
+        }
+
+
+        .register-left img {
+            margin-top: 15%;
+            margin-bottom: 5%;
+            width: 25%;
+            -webkit-animation: mover 2s infinite alternate;
+            animation: mover 1s infinite alternate;
+        }
+
+        @-webkit-keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .register-left p {
+            font-weight: lighter;
+            padding: 12%;
+            margin-top: -9%;
+        }
+
+        .register .register-form {
+            padding: 10%;
+            margin-top: 10%;
+        }
+
+        .btnRegister {
+            float: right;
+            margin-top: 10%;
+            border: none;
+            border-radius: 1.5rem;
+            padding: 2%;
+            background: #0062cc;
+            color: #fff;
+            font-weight: 600;
+            font-family: 'Varela Round', sans-serif;
+            width: 50%;
+            cursor: pointer;
+        }
+
+        .register .nav-tabs {
+            margin-top: 3%;
+            border: none;
+            background: #0062cc;
+            border-radius: 1.5rem;
+            width: 28%;
+            float: right;
+        }
+
+        .register .nav-tabs .nav-link {
+            padding: 2%;
+            height: 34px;
+            font-weight: 600;
+            color: #fff;
+            border-top-right-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+        }
+
+        .register .nav-tabs .nav-link:hover {
+            border: none;
+        }
+
+        .register .nav-tabs .nav-link.active {
+            width: 100px;
+            color: #0062cc;
+            border: 2px solid #0062cc;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+
+        .register-heading {
+            text-align: center;
+            margin-top: 8%;
+            margin-bottom: -15%;
+            color: #ffffff;
+        }
+
+        .logo {
+            width: 60px;
+        }
+
+
+        .sidebar li .submenu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- new nav bar -->
+
+    <header class="header">
+        <nav class="navbar">
+            <span class="open-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16">
+                    <g fill="#252a32" fill-rule="evenodd">
+                        <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                    </g>
+                </svg>
+            </span>
+            <h1>
+                <img class="logo"
+                    src="https://www.pikpng.com/pngl/b/59-596262_wolf-png-logo-for-free-download-on-wolf.png" width="10"
+                    alt="" srcset="">
+            </h1>
+            <div class="menu-wrapper">
+                <ul class="menu">
+                    <li class="menu-block">
+                        <span class="close-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                <path fill="#252a32" fill-rule="evenodd"
+                                    d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" />
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                    <li class="menu-item has-collapsible">
+                        <a href="#"><span></span>About US</a>
+                        <!-- <ul class="menu-child">
+                            <li class="menu-child-item"><a href="#"></a></li>
+                            <li class="menu-child-item"><a href="#"></a></li>
+                            <li class="menu-child-item"><a href="#"></a></li>
+                            <li class="menu-child-item"><a href="#"></a></li>
+                            <li class="menu-child-item"><a href="#"></a></li>
+                        </ul> -->
+                    </li>
+                    <li class="menu-item has-collapsible">
+                        <a href="#"><span></span>Blogs</a>
+                        <!-- <ul class="menu-child">
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="menu-item has-collapsible">
+                        <a href="#"><span></span>Services</a>
+                        <!-- <ul class="menu-child">
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="menu-item has-collapsible">
+                        <a href="#"><span></span>Portfolio</a>
+                        <!-- <ul class="menu-child">
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                            <li class="menu-child-item"><a href="#">Sub Menu Item</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Recent Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- new nav bar -->
+
+
+
+    <!-- <h1>this is my html page</h1> -->
+    <div>
+        <div>
+
+
+        </div>
+        <div>
+            <div id="vanta-canvas">
+                <div class="demo">
+                    <h1 id="demo"></h1>
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+                <script>
+
+                    VANTA.NET({
+                        el: "#vanta-canvas",
+                        mouseControls: false,
+                        touchControls: true,
+                        gyroControls: false,
+                        minHeight: 200.00,
+                        minWidth: 200.00,
+                        scale: 1.00,
+                        scaleMobile: 1.00,
+                        color: 0x3f3fff,
+                        points: 12.00
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script>
+    const openMenu = document.querySelector(".open-menu");
+    const closeMenu = document.querySelector(".close-menu");
+    const menuWrapper = document.querySelector(".menu-wrapper");
+    const hasCollapsible = document.querySelectorAll(".has-collapsible");
+
+    // Sidenav Toggle
+    openMenu.addEventListener("click", function () {
+        menuWrapper.classList.add("offcanvas");
+    });
+
+    closeMenu.addEventListener("click", function () {
+        menuWrapper.classList.remove("offcanvas");
+    });
+
+    // Collapsible Menu
+    hasCollapsible.forEach(function (collapsible) {
+        collapsible.addEventListener("click", function () {
+            collapsible.classList.toggle("active");
+
+            // Close Other Collapsible
+            hasCollapsible.forEach(function (otherCollapsible) {
+                if (otherCollapsible !== collapsible) {
+                    otherCollapsible.classList.remove("active");
+                }
+            });
+        });
+    });
+
+    var i = 0;
+    var txt = 'We are the BEST'; /* The text */
+    var speed = 200; /* The speed/duration of the effect in milliseconds */
+
+    typeWriter()
+
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+</script>
+
+</html>
